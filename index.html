@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Central Vet Diagnostics provides premium quality veterinary pathology, digital X-Ray, ECG, and AI-assisted blood analysis at your doorstep and farm in Gwalior. Accurate results, trusted diagnosis.">
+  <title>Central Vet Diagnostics | Premium Veterinary Pathology & Portable X-Ray</title>
+  
+  <!-- Google Fonts - Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              50: '#f0f4f8',
+              100: '#e1e9f3',
+              200: '#c2d4e6',
+              300: '#94b3d3',
+              400: '#628eba',
+              500: '#406c9a',
+              600: '#32547b',
+              700: '#274160',
+              800: '#1a2b40',
+              900: '#0b1a30', // Primary Deep Navy
+              950: '#050f1c',
+            },
+            teal: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              300: '#5eead4',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488', // Soft Medical Teal
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Stylesheet link -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gradient-to-b from-[#f0f6fa] via-[#e3eef6] to-[#f0f6fa] text-navy-900 min-h-screen relative overflow-x-hidden font-sans selection:bg-teal-500 selection:text-white">
+
+  <!-- Sticky Navigation Header -->
+  <header class="sticky top-0 z-40 bg-[#f0f6fa]/85 backdrop-blur-md border-b border-[#cbdbe7]/70 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <!-- Real Circular Logo Image -->
+        <img src="./images/logo.png" alt="Central Vet Diagnostics Logo" class="w-12 h-12 object-contain rounded-full transition-transform group-hover:scale-105 duration-300">
+        <div class="flex flex-col">
+          <span class="text-lg font-black tracking-tight uppercase leading-none text-navy-900">Central Vet</span>
+          <span class="text-xs font-bold tracking-widest uppercase text-teal-600 leading-none mt-1">Diagnostics</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav links -->
+      <nav class="hidden md:flex items-center gap-8 font-semibold text-navy-700">
+        <a href="#" class="hover:text-teal-600 transition-colors py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-teal-600 hover:after:w-full after:transition-all">Home</a>
+        <a href="#patient-guide" class="hover:text-teal-600 transition-colors py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-teal-600 hover:after:w-full after:transition-all">How It Works</a>
+        <a href="#services" class="hover:text-teal-600 transition-colors py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-teal-600 hover:after:w-full after:transition-all">Services</a>
+        <a href="#bulletins" class="hover:text-teal-600 transition-colors py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-teal-600 hover:after:w-full after:transition-all">Service Posters</a>
+        <a href="#booking" class="hover:text-teal-600 transition-colors py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-teal-600 hover:after:w-full after:transition-all">Book Test</a>
+      </nav>
+
+      <!-- CTA Buttons -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="tel:9977160088" class="flex items-center gap-2 px-5 py-2.5 border-2 border-navy-900 text-navy-900 font-bold rounded-full hover:bg-navy-900 hover:text-white transition-all duration-200">
+          <i data-lucide="phone" class="w-4 h-4 animate-pulse"></i>
+          <span>9977160088</span>
+        </a>
+        <a href="#booking" class="px-6 py-2.5 bg-teal-600 text-white font-bold rounded-full shadow-md shadow-teal-600/10 hover:bg-teal-700 hover:shadow-teal-600/25 transition-all duration-200">
+          Book Diagnostics
+        </a>
+      </div>
+
+      <!-- Hamburger Menu for Mobile -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-navy-900 hover:text-teal-600 focus:outline-none transition-colors" aria-label="Toggle Menu">
+        <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Menu Panel -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-navy-100 shadow-xl py-6 px-6 transition-all duration-300">
+      <nav class="flex flex-col gap-4 font-semibold text-navy-700">
+        <a href="#" class="mobile-nav-link hover:text-teal-600 transition-colors py-2">Home</a>
+        <a href="#patient-guide" class="mobile-nav-link hover:text-teal-600 transition-colors py-2">How It Works</a>
+        <a href="#services" class="mobile-nav-link hover:text-teal-600 transition-colors py-2">Services</a>
+        <a href="#bulletins" class="mobile-nav-link hover:text-teal-600 transition-colors py-2">Service Posters</a>
+        <a href="#booking" class="mobile-nav-link hover:text-teal-600 transition-colors py-2">Book Test</a>
+        <a href="tel:9977160088" class="w-full text-center px-6 py-3 border border-navy-900 text-navy-900 rounded-xl font-bold flex items-center justify-center gap-2 mt-2">
+          <i data-lucide="phone" class="w-4 h-4"></i>
+          <span>Call 9977160088</span>
+        </a>
+        <a href="#booking" class="mobile-nav-link w-full text-center px-6 py-3 bg-teal-600 text-white rounded-xl shadow-md font-bold hover:bg-teal-700 transition-all mt-1">
+          Book Diagnostics
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section (Using microscope-tech.jpg) -->
+  <section class="py-12 md:py-20 max-w-7xl mx-auto px-6 overflow-hidden">
+    <div class="bg-gradient-to-br from-[#e2edf6] to-[#d6e5f0] rounded-[2.5rem] border border-[#b8cee0] shadow-xl shadow-navy-900/5 p-8 md:p-14 relative">
+      <div class="absolute top-10 right-10 w-48 h-48 bg-teal-50 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+      
+      <div class="grid md:grid-cols-12 gap-12 items-center relative z-10">
+        <!-- Left Column Text Content -->
+        <div class="md:col-span-6 space-y-8 text-center md:text-left">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-teal-50 border border-teal-100 text-teal-700 rounded-full font-bold text-sm">
+            <i data-lucide="shield-check" class="w-4 h-4 text-teal-600"></i>
+            <span>Accurate Results • Trusted Diagnosis</span>
+          </div>
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-navy-900 leading-tight">
+            Veterinary Lab Support <br class="hidden sm:inline">
+            <span class="text-teal-600">At Your Doorstep</span>
+          </h1>
+          <p class="text-lg text-navy-600 max-w-xl mx-auto md:mx-0 font-light leading-relaxed">
+            Central Vet Diagnostics brings advanced pathology, blood tests, and portable digital X-ray services directly to your home or farm in Gwalior. Dedicated diagnostic support tailored for all animals.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-2">
+            <a href="#booking" class="w-full sm:w-auto px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white text-lg font-bold rounded-full shadow-lg shadow-teal-600/20 hover:-translate-y-0.5 transition-all duration-200 text-center flex items-center justify-center gap-2 group">
+              Schedule Home / Farm Visit
+              <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+            <a href="tel:9977160088" class="w-full sm:w-auto px-8 py-4 bg-white border border-navy-200 hover:border-teal-300 text-navy-800 hover:text-teal-700 text-lg font-bold rounded-full shadow-sm hover:shadow-md transition-all duration-200 text-center flex items-center justify-center gap-2">
+              <i data-lucide="phone" class="w-5 h-5 text-teal-600"></i>
+              9977160088
+            </a>
+          </div>
+          
+          <!-- Trust Indicators -->
+          <div class="pt-6 grid grid-cols-3 gap-4 border-t border-navy-100 max-w-md mx-auto md:mx-0 text-navy-800">
+            <div>
+              <div class="text-2xl sm:text-3xl font-black text-teal-600">100%</div>
+              <div class="text-[10px] sm:text-xs text-navy-500 font-extrabold uppercase mt-1">Accurate Reports</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-black text-teal-600">On-Site</div>
+              <div class="text-[10px] sm:text-xs text-navy-500 font-extrabold uppercase mt-1">Home & Farm Visits</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-black text-teal-600">Dedicated</div>
+              <div class="text-[10px] sm:text-xs text-navy-500 font-extrabold uppercase mt-1">Lab Infrastructure</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column Hero Clinic Image -->
+        <div class="md:col-span-6 relative flex flex-col items-center">
+          <div class="relative w-full max-w-lg aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-xl border border-teal-500/10 bg-teal-50/20 p-2">
+            <!-- Real Microscope Technician Image -->
+            <img src="./images/lab-microscope-tech.jpg" alt="Central Vet Diagnostics Lab Analysis" class="w-full h-full object-cover rounded-[2rem] transition-transform duration-750">
+            
+            <div class="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md px-5 py-3.5 rounded-2xl shadow-lg border border-navy-100 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center shrink-0">
+                <i data-lucide="award" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-[10px] text-navy-400 font-extrabold uppercase tracking-wider">Expertise</div>
+                <div class="text-xs font-black text-navy-900">Certified Pathologists</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Overlapping Mini Showcases for Lab Infrastructure -->
+          <div class="flex gap-4 mt-6 w-full max-w-lg justify-center">
+            <div class="flex items-center gap-3 bg-white/90 backdrop-blur-sm border border-navy-100/60 p-2 rounded-2xl shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 duration-200">
+              <img src="./images/lab-tech-tubes.jpg" alt="Sterile Sample Handling" class="w-16 h-16 object-cover rounded-xl border border-navy-100">
+              <div class="pr-2">
+                <span class="text-[9px] text-teal-600 font-bold uppercase tracking-wider block">Modern Infrastructure</span>
+                <span class="text-xs font-extrabold text-navy-900 block leading-tight">Sample Processing</span>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-3 bg-white/90 backdrop-blur-sm border border-navy-100/60 p-2 rounded-2xl shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 duration-200">
+              <img src="./images/lab-tech-pipette.jpg" alt="Advanced Pathology" class="w-16 h-16 object-cover rounded-xl border border-navy-100">
+              <div class="pr-2">
+                <span class="text-[9px] text-teal-600 font-bold uppercase tracking-wider block">Pathology Laboratory</span>
+                <span class="text-xs font-extrabold text-navy-900 block leading-tight">Precision Pipetting</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clear 3-Step Patient Booking Guide (Clarifying vision for patients) -->
+  <section id="patient-guide" class="py-12 max-w-7xl mx-auto px-6 scroll-mt-24">
+    <div class="bg-gradient-to-r from-navy-900 to-navy-950 text-white rounded-[2.5rem] border border-navy-800 shadow-xl p-8 md:p-12">
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <span class="text-teal-400 font-extrabold uppercase tracking-widest text-xs">Easy Step-by-Step Guide</span>
+        <h2 class="text-3xl font-black tracking-tight">How to Get Diagnostic Support</h2>
+        <p class="text-navy-200 text-sm font-light">Follow these three simple steps to book doorstep testing for your pets or livestock in Gwalior.</p>
+      </div>
+      
+      <!-- Steps grid -->
+      <div class="grid md:grid-cols-3 gap-8 text-center relative">
+        <!-- Step 1 -->
+        <div class="space-y-4 relative">
+          <div class="w-12 h-12 rounded-full bg-teal-600 text-white font-black text-lg flex items-center justify-center mx-auto shadow-md">
+            1
+          </div>
+          <h3 class="text-lg font-bold">Select Required Tests</h3>
+          <p class="text-navy-300 text-sm font-light max-w-xs mx-auto leading-relaxed">
+            Choose Pathology (Blood Panels), Digital X-Ray, ABG Analysis, or ECG in the checklist below for a price estimate.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="space-y-4 relative">
+          <div class="w-12 h-12 rounded-full bg-teal-600 text-white font-black text-lg flex items-center justify-center mx-auto shadow-md">
+            2
+          </div>
+          <h3 class="text-lg font-bold">Fill in Animal Details</h3>
+          <p class="text-navy-300 text-sm font-light max-w-xs mx-auto leading-relaxed">
+            Complete the 1-minute booking form with your contact, animal type, preferred date, and collection address.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="space-y-4 relative">
+          <div class="w-12 h-12 rounded-full bg-teal-600 text-white font-black text-lg flex items-center justify-center mx-auto shadow-md">
+            3
+          </div>
+          <h3 class="text-lg font-bold">Technician Visits Farm/Home</h3>
+          <p class="text-navy-300 text-sm font-light max-w-xs mx-auto leading-relaxed">
+            Our certified lab team visits your home or farm. We collect samples safely and send accurate reports to your phone.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services Section -->
+  <section id="services" class="py-16 max-w-7xl mx-auto px-6 relative">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <span class="text-teal-600 font-extrabold uppercase tracking-widest text-sm">Clinical Excellence</span>
+      <h2 class="text-3xl sm:text-4xl font-black text-navy-900 tracking-tight">Our Comprehensive Diagnostics</h2>
+      <p class="text-navy-600 text-lg font-light leading-relaxed">
+        Bringing clinical precision and state-of-the-art equipment to animal healthcare. We cater to all animals with professional empathy.
+      </p>
+    </div>    <!-- Services Grid (Floating Glassmorphic Blue Cards on Soft Ice Background) -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Service 1: Pathology & Sample Collection -->
+      <div class="glass-blue-card p-8 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 bg-teal-50/80 text-teal-600 rounded-xl flex items-center justify-center mb-6 border border-teal-100">
+            <i data-lucide="flask-conical" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy-900 mb-2">Sample Collection</h3>
+          <p class="text-navy-600 font-light text-sm leading-relaxed mb-4">
+            Sterile, stress-free doorstep sample collection. Blood panels, biochemistry, microbiology, and complete blood count (CBC).
+          </p>
+          <div class="w-full aspect-[16/10] rounded-xl overflow-hidden border border-[#cbdbe7] shadow-inner bg-[#eaf1f7] mb-2">
+            <img src="./images/lab-tech-tubes.jpg" alt="Blood Sample Collection Tubes" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="mt-4 pt-4 border-t border-navy-100/40 flex items-center justify-between text-xs text-navy-400 font-bold uppercase tracking-wider">
+          <span>Home & Lab</span>
+          <span class="text-teal-600 font-extrabold">Dedicated Support</span>
+        </div>
+      </div>
+
+      <!-- Service 2: Digital X-Ray -->
+      <div class="glass-blue-card p-8 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 bg-teal-50/80 text-teal-600 rounded-xl flex items-center justify-center mb-6 border border-teal-100">
+            <i data-lucide="scan" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy-900 mb-2">Portable Digital X-Ray</h3>
+          <p class="text-navy-600 font-light text-sm leading-relaxed mb-4">
+            Rapid digital radiography at your farm or home. Instant skeletal and internal organ imaging for large and small animals.
+          </p>
+          <div class="w-full aspect-[16/10] rounded-xl overflow-hidden border border-[#cbdbe7] shadow-inner bg-[#eaf1f7] mb-2">
+            <img src="./images/xray-field-horse.jpg" alt="Portable Digital X-Ray Machine in Action" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="mt-4 pt-4 border-t border-navy-100/40 flex items-center justify-between text-xs text-navy-400 font-bold uppercase tracking-wider">
+          <span>On-Site / Farm</span>
+          <span class="text-teal-600 font-extrabold">Immediate Preview</span>
+        </div>
+      </div>
+
+      <!-- Service 3: Portable ABG -->
+      <div class="glass-blue-card p-8 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 bg-teal-50/80 text-teal-600 rounded-xl flex items-center justify-center mb-6 border border-teal-100">
+            <i data-lucide="activity" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy-900 mb-2">Portable ABG</h3>
+          <p class="text-navy-600 font-light text-sm leading-relaxed mb-4">
+            Real-time Blood Gas Analysis (ABG) for critical cases. Crucial for anesthesia monitoring and acid-base status on-site.
+          </p>
+          <div class="w-full aspect-[16/10] rounded-xl overflow-hidden border border-[#cbdbe7] shadow-inner bg-[#eaf1f7] mb-2">
+            <img src="./images/lab-tech-pipette.jpg" alt="Blood Gas Analysis pipette testing" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="mt-4 pt-4 border-t border-navy-100/40 flex items-center justify-between text-xs text-navy-400 font-bold uppercase tracking-wider">
+          <span>Critical Care</span>
+          <span class="text-teal-600 font-extrabold">Fast Results</span>
+        </div>
+      </div>
+
+      <!-- Service 4: Portable ECG -->
+      <div class="glass-blue-card p-8 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 bg-teal-50/80 text-teal-600 rounded-xl flex items-center justify-center mb-6 border border-teal-100">
+            <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy-900 mb-2">Portable ECG</h3>
+          <p class="text-navy-600 font-light text-sm leading-relaxed mb-4">
+            Mobile electrocardiogram checking for cardiac evaluation in large animals and domestic pets right at your doorstep.
+          </p>
+          <div class="w-full aspect-[16/10] rounded-xl overflow-hidden border border-[#cbdbe7] shadow-inner bg-[#eaf1f7] mb-2">
+            <img src="./images/ecg-monitor.jpg" alt="Portable Vet ECG Device" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="mt-4 pt-4 border-t border-navy-100/40 flex items-center justify-between text-xs text-navy-400 font-bold uppercase tracking-wider">
+          <span>Cardiology</span>
+          <span class="text-teal-600 font-extrabold">Real-Time Waveform</span>
+        </div>
+      </div>
+
+      <!-- Service 5: Field Testing -->
+      <div class="glass-blue-card p-8 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 bg-teal-50/80 text-teal-600 rounded-xl flex items-center justify-center mb-6 border border-teal-100">
+            <i data-lucide="tractor" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy-900 mb-2">Field Testing</h3>
+          <p class="text-navy-600 font-light text-sm leading-relaxed mb-4">
+            Diagnostic support on-site at the farm. Designed to avoid stress and transport overheads for livestock like cows and horses.
+          </p>
+          <div class="w-full aspect-[16/10] rounded-xl overflow-hidden border border-[#cbdbe7] shadow-inner bg-[#eaf1f7] mb-2">
+            <img src="./images/horse-wound-xray.jpg" alt="Equine Injury Radiography Setup at Stable" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="mt-4 pt-4 border-t border-navy-100/40 flex items-center justify-between text-xs text-navy-400 font-bold uppercase tracking-wider">
+          <span>At-Farm Support</span>
+          <span class="text-teal-600 font-extrabold">Minimum Stress</span>
+        </div>
+      </div>
+
+      <!-- Service 6: All-Animal Diagnostic Support -->
+      <div class="glass-blue-card p-8 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 bg-teal-50/80 text-teal-600 rounded-xl flex items-center justify-center mb-6 border border-teal-100">
+            <i data-lucide="paw-print" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-extrabold text-navy-900 mb-2">All Animals Covered</h3>
+          <p class="text-navy-600 font-light text-sm leading-relaxed mb-4">
+            Whether a companion cat, a pet dog, or dairy livestock (cows, buffalos, poultry), we tailor tests to fit specific animal diagnostics.
+          </p>
+          <div class="w-full aspect-[16/10] rounded-xl overflow-hidden border border-[#cbdbe7] shadow-inner bg-[#eaf1f7] mb-2">
+            <img src="./images/vet-with-pet.jpg" alt="Vet Doctor with Retriever Puppy" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="mt-4 pt-4 border-t border-navy-100/40 flex items-center justify-between text-xs text-navy-400 font-bold uppercase tracking-wider">
+          <span>Comprehensive</span>
+          <span class="text-teal-600 font-extrabold">All Species</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- High-Tech AI diagnostics feature -->
+  <section class="py-12 max-w-7xl mx-auto px-6 relative">
+    <div class="bg-gradient-to-br from-[#e2edf6] to-[#d6e5f0] rounded-[2.5rem] border border-[#b8cee0] shadow-xl shadow-navy-900/5 p-8 md:p-14 relative overflow-hidden">
+      <div class="absolute top-0 right-0 bg-gradient-to-l from-teal-600 to-teal-500 text-white text-xs font-black uppercase px-6 py-2 rounded-bl-2xl tracking-widest shadow-md">
+        Smart Pathology Integration
+      </div>
+      
+      <div class="grid md:grid-cols-12 gap-12 items-center">
+        <!-- Left Column: AI Diagnostics Content -->
+        <div class="md:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-teal-50 text-teal-700 border border-teal-100 rounded-lg text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="cpu" class="w-4 h-4 text-teal-600"></i>
+            <span>AI-Assisted Precision</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-black text-navy-900 tracking-tight leading-tight">
+            AI-Powered Diagnostic Scanning <br>
+            <span class="text-teal-600">For 100% Precision</span>
+          </h2>
+          <p class="text-navy-600 font-light leading-relaxed text-base">
+            Central Vet Diagnostics utilizes cutting-edge computer-vision microscope software. This technology automates cell differentiation, identifies blood-borne parasites, and maps cellular counts alongside expert pathology verification.
+          </p>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-navy-100">
+            <div class="flex gap-3 items-start">
+              <div class="w-8 h-8 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center shrink-0 border border-teal-100">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-navy-900">Zero Human Error Margin</h4>
+                <p class="text-xs text-navy-500 font-light mt-0.5">Automated screening cross-referenced by veterinary pathologists.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3 items-start">
+              <div class="w-8 h-8 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center shrink-0 border border-teal-100">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-navy-900">Rapid Radiograph Analytics</h4>
+                <p class="text-xs text-navy-500 font-light mt-0.5">Digital X-Ray scanning utilizing neural networks for fracture mapping.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive AI Scanning Graphic -->
+        <div class="md:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-sm aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-teal-500/20 bg-navy-900 p-1 group">
+            <img src="./images/ai-diagnostics.png" alt="Veterinary AI Pathology Scanner Interface" class="w-full h-full object-cover rounded-xl opacity-90 group-hover:scale-102 transition-transform duration-500">
+            <div class="absolute left-1 right-1 h-0.5 bg-gradient-to-r from-transparent via-teal-400 to-transparent shadow-[0_0_8px_rgba(20,184,166,0.8)] animate-[scan_3s_ease-in-out_infinite] pointer-events-none"></div>
+            <div class="absolute top-4 left-4 bg-navy-950/80 backdrop-blur-md border border-teal-500/30 px-3 py-1.5 rounded-lg text-[10px] text-teal-400 font-mono tracking-widest uppercase">
+              SYS STATUS: ACTIVE SCAN
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Digital X-Ray Case studies Gallery -->
+  <section class="py-16 max-w-7xl mx-auto px-6 relative">
+    <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+      <span class="text-teal-600 font-extrabold uppercase tracking-widest text-sm">Clinical Radiography</span>
+      <h2 class="text-3xl sm:text-4xl font-black text-navy-900 tracking-tight">Diagnostics in Action: Digital X-Ray Cases</h2>
+      <p class="text-navy-600 text-lg font-light leading-relaxed">
+        See the high-definition imaging capabilities of our portable digital X-Ray system. We capture clear, detailed diagnostics on-site.
+      </p>
+      
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap justify-center gap-3 pt-4" id="xray-tabs">
+        <button data-filter="all" class="xray-tab-btn px-6 py-2.5 rounded-full font-bold text-sm bg-teal-600 text-white shadow-sm transition-all duration-200">
+          All Cases
+        </button>
+        <button data-filter="small" class="xray-tab-btn px-6 py-2.5 rounded-full font-bold text-sm bg-white border border-navy-100 text-navy-700 hover:border-teal-200 transition-all duration-200">
+          Small Animals (Dogs & Cats)
+        </button>
+        <button data-filter="large" class="xray-tab-btn px-6 py-2.5 rounded-full font-bold text-sm bg-white border border-navy-100 text-navy-700 hover:border-teal-200 transition-all duration-200">
+          Large Animals (Equine / Farms)
+        </button>
+      </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto" id="xray-gallery">
+      <!-- Case 1: Dog Chest (Small) -->
+      <div class="xray-card glass-blue-card p-3 rounded-2xl" data-category="small">
+        <div class="rounded-xl overflow-hidden aspect-[4/3] border border-navy-100 bg-navy-950 relative group">
+          <img src="./images/xray-dog-chest.jpg" alt="Canine Thorax X-Ray" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute bottom-3 left-3 bg-navy-950/80 backdrop-blur-sm text-[10px] text-teal-400 font-mono px-2 py-1 rounded">Canine Thorax</span>
+        </div>
+        <div class="p-3 text-center">
+          <h4 class="font-extrabold text-navy-900 text-sm">Dog Chest Radiography</h4>
+          <p class="text-[11px] text-navy-500 font-light mt-0.5">High definition rib & heart alignment mapping.</p>
+        </div>
+      </div>
+
+      <!-- Case 2: Dog Pelvis (Small) -->
+      <div class="xray-card glass-blue-card p-3 rounded-2xl" data-category="small">
+        <div class="rounded-xl overflow-hidden aspect-[4/3] border border-navy-100 bg-navy-950 relative group">
+          <img src="./images/xray-dog-pelvis.jpg" alt="Canine Pelvis X-Ray" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute bottom-3 left-3 bg-navy-950/80 backdrop-blur-sm text-[10px] text-teal-400 font-mono px-2 py-1 rounded">Canine Pelvis</span>
+        </div>
+        <div class="p-3 text-center">
+          <h4 class="font-extrabold text-navy-900 text-sm">Dog Hip & Pelvis Scan</h4>
+          <p class="text-[11px] text-navy-500 font-light mt-0.5">Evaluation of hip joints, femur and lower spine.</p>
+        </div>
+      </div>
+
+      <!-- Case 3: Dog Abdomen (Small) -->
+      <div class="xray-card glass-blue-card p-3 rounded-2xl" data-category="small">
+        <div class="rounded-xl overflow-hidden aspect-[4/3] border border-navy-100 bg-navy-950 relative group">
+          <img src="./images/xray-dog-abdomen.jpg" alt="Canine Abdominal X-Ray" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute bottom-3 left-3 bg-navy-950/80 backdrop-blur-sm text-[10px] text-teal-400 font-mono px-2 py-1 rounded">Canine Abdomen</span>
+        </div>
+        <div class="p-3 text-center">
+          <h4 class="font-extrabold text-navy-900 text-sm">Dog Abdominal Radiograph</h4>
+          <p class="text-[11px] text-navy-500 font-light mt-0.5">Spine and internal organ mapping in high definition.</p>
+        </div>
+      </div>
+
+      <!-- Case 4: Animal Paw (Small) -->
+      <div class="xray-card glass-blue-card p-3 rounded-2xl" data-category="small">
+        <div class="rounded-xl overflow-hidden aspect-[4/3] border border-navy-100 bg-navy-950 relative group">
+          <img src="./images/xray-animal-paw.jpg" alt="Feline/Canine Limb X-Ray" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute bottom-3 left-3 bg-navy-950/80 backdrop-blur-sm text-[10px] text-teal-400 font-mono px-2 py-1 rounded">Paw/Distal Limb</span>
+        </div>
+        <div class="p-3 text-center">
+          <h4 class="font-extrabold text-navy-900 text-sm">Pet Limb & Joint Scan</h4>
+          <p class="text-[11px] text-navy-500 font-light mt-0.5">Bone fracture and joint swelling diagnostics.</p>
+        </div>
+      </div>
+
+      <!-- Case 5: Horse Hoof Side (Large) -->
+      <div class="xray-card glass-blue-card p-3 rounded-2xl" data-category="large">
+        <div class="rounded-xl overflow-hidden aspect-[4/3] border border-navy-100 bg-navy-950 relative group">
+          <img src="./images/xray-horse-hoof-side.jpg" alt="Equine Hoof X-Ray Side" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute bottom-3 left-3 bg-navy-950/80 backdrop-blur-sm text-[10px] text-teal-400 font-mono px-2 py-1 rounded">Equine Hoof Side</span>
+        </div>
+        <div class="p-3 text-center">
+          <h4 class="font-extrabold text-navy-900 text-sm">Equine Hoof Lateral Scan</h4>
+          <p class="text-[11px] text-navy-500 font-light mt-0.5">Analyzing horse shoe fitting and skeletal structure.</p>
+        </div>
+      </div>
+
+      <!-- Case 6: Horse Hoof Front (Large) -->
+      <div class="xray-card glass-blue-card p-3 rounded-2xl" data-category="large">
+        <div class="rounded-xl overflow-hidden aspect-[4/3] border border-navy-100 bg-navy-950 relative group">
+          <img src="./images/xray-horse-hoof-front.jpg" alt="Equine Hoof X-Ray Front" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute bottom-3 left-3 bg-navy-950/80 backdrop-blur-sm text-[10px] text-teal-400 font-mono px-2 py-1 rounded">Equine Hoof Front</span>
+        </div>
+        <div class="p-3 text-center">
+          <h4 class="font-extrabold text-navy-900 text-sm">Equine Hoof AP Scan</h4>
+          <p class="text-[11px] text-navy-500 font-light mt-0.5">Frontal view of horse hoof bones and structure.</p>
+        </div>
+      </div>
+
+      <!-- Case 7: Field Horse X-Ray (Large) -->
+      <div class="xray-card glass-blue-card p-3 rounded-2xl" data-category="large">
+        <div class="rounded-xl overflow-hidden aspect-[4/3] border border-navy-100 bg-navy-950 relative group">
+          <img src="./images/xray-field-horse.jpg" alt="On-Site Horse X-Ray Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute bottom-3 left-3 bg-navy-950/80 backdrop-blur-sm text-[10px] text-teal-400 font-mono px-2 py-1 rounded">On-Site Field Visit</span>
+        </div>
+        <div class="p-3 text-center">
+          <h4 class="font-extrabold text-navy-900 text-sm">Field Radiography</h4>
+          <p class="text-[11px] text-navy-500 font-light mt-0.5">Capturing digital X-rays directly at the farm/stable.</p>
+        </div>
+      </div>
+
+      <!-- Case 8: Horse Leg Wound (Large) -->
+      <div class="xray-card glass-blue-card p-3 rounded-2xl" data-category="large">
+        <div class="rounded-xl overflow-hidden aspect-[4/3] border border-navy-100 bg-navy-950 relative group">
+          <img src="./images/horse-wound-xray.jpg" alt="Horse Wound X-Ray plate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute bottom-3 left-3 bg-navy-950/80 backdrop-blur-sm text-[10px] text-teal-400 font-mono px-2 py-1 rounded">Injury Radiography</span>
+        </div>
+        <div class="p-3 text-center">
+          <h4 class="font-extrabold text-navy-900 text-sm">Wound Area Diagnostics</h4>
+          <p class="text-[11px] text-navy-500 font-light mt-0.5">Precise internal examination beneath deep tissue injuries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Information Posters & Banners Section (Integrating flyer-dedicated-lab.jpg and pathology-search.jpg) -->
+  <section id="bulletins" class="py-16 max-w-7xl mx-auto px-6 scroll-mt-24">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <span class="text-teal-600 font-extrabold uppercase tracking-widest text-sm">Diagnostic Bulletins</span>
+      <h2 class="text-3xl sm:text-4xl font-black text-navy-900 tracking-tight">Our Service Posters & Offers</h2>
+      <p class="text-navy-600 text-lg font-light leading-relaxed">
+        Read our official pamphlets and banners directly to learn more about tests, home support details, and service quality.
+      </p>
+    </div>
+
+    <!-- Interactive Slideshow for Banners/Posters -->
+    <div class="max-w-xl mx-auto glass-blue-card rounded-3xl p-4 relative group">
+      <!-- Slides Container -->
+      <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border border-navy-100 bg-navy-50">
+        <!-- Slide 1 -->
+        <div class="poster-slide absolute inset-0 transition-opacity duration-500 ease-in-out" id="poster-slide-0">
+          <img src="./images/poster-pet-health.jpg" alt="Central Vet Diagnostic Centre - Pet Health Poster" class="w-full h-full object-contain">
+        </div>
+        <!-- Slide 2 -->
+        <div class="poster-slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none" id="poster-slide-1">
+          <img src="./images/poster-pathology-search.jpg" alt="Looking for Pet Pathology Lab Banner" class="w-full h-full object-contain">
+        </div>
+        <!-- Slide 3 -->
+        <div class="poster-slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none" id="poster-slide-2">
+          <img src="./images/poster-precision-care.jpg" alt="Precision Care for Pets Banner" class="w-full h-full object-contain">
+        </div>
+      </div>
+      
+      <!-- Slide Controls Navigation -->
+      <div class="flex justify-between items-center mt-5 px-2">
+        <button id="prev-poster-btn" type="button" class="w-10 h-10 rounded-full bg-navy-900 hover:bg-teal-600 text-white flex items-center justify-center shadow-md transition-all duration-200" aria-label="Previous Poster">
+          <i data-lucide="chevron-left" class="w-5 h-5"></i>
+        </button>
+        
+        <!-- Dots indicators -->
+        <div class="flex gap-2" id="poster-dots">
+          <button class="poster-dot w-2.5 h-2.5 rounded-full bg-teal-600" data-slide="0" aria-label="Slide 1"></button>
+          <button class="poster-dot w-2.5 h-2.5 rounded-full bg-navy-200" data-slide="1" aria-label="Slide 2"></button>
+          <button class="poster-dot w-2.5 h-2.5 rounded-full bg-navy-200" data-slide="2" aria-label="Slide 3"></button>
+        </div>
+        
+        <button id="next-poster-btn" type="button" class="w-10 h-10 rounded-full bg-navy-900 hover:bg-teal-600 text-white flex items-center justify-center shadow-md transition-all duration-200" aria-label="Next Poster">
+          <i data-lucide="chevron-right" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Review Testimonial Section (Integrating testimonial-anusha.jpg) -->
+  <section class="py-16 max-w-7xl mx-auto px-6 relative">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <span class="text-teal-600 font-extrabold uppercase tracking-widest text-sm">Verified Reviews</span>
+      <h2 class="text-3xl sm:text-4xl font-black text-navy-900 tracking-tight">What Owners Say About Us</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 max-w-4xl mx-auto items-center">
+      <!-- Left: Graphic Testimonial (testimonial-anusha-shetty.jpg) -->
+      <div class="md:col-span-6 glass-blue-card p-3 rounded-3xl">
+        <div class="rounded-2xl overflow-hidden border border-[#cbdbe7] bg-[#eaf1f7]">
+          <img src="./images/testimonial-anusha-shetty.jpg" alt="Anusha Shetty Google Testimonial Flyer" class="w-full h-auto object-contain">
+        </div>
+      </div>
+      
+      <!-- Right: Text review detail -->
+      <div class="md:col-span-6 glass-blue-card p-8 md:p-10 rounded-3xl relative flex flex-col justify-between items-center text-center h-full">
+        <div class="flex items-center gap-1 mb-4">
+          <svg viewBox="0 0 24 24" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+          </svg>
+          <span class="text-xs font-extrabold text-navy-500 uppercase tracking-widest">Google Review</span>
+        </div>
+
+        <div class="flex items-center gap-1 text-amber-400 mb-6">
+          <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+        </div>
+
+        <p class="text-navy-900 font-normal italic text-lg leading-relaxed mb-6">
+          "Great service and very professional. I'm definitely coming back again."
+        </p>
+
+        <div class="flex flex-col items-center">
+          <div class="w-12 h-12 bg-teal-50 text-teal-600 font-extrabold rounded-full flex items-center justify-center border border-teal-100 mb-2">
+            AS
+          </div>
+          <span class="font-extrabold text-navy-900">Anusha Shetty</span>
+          <span class="text-xs text-navy-400 font-bold mt-0.5">Central Vet Diagnostics Client</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Test Booking / Enquiry Form Section -->
+  <section id="booking" class="py-16 max-w-7xl mx-auto px-6 scroll-mt-20">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <span class="text-teal-600 font-extrabold uppercase tracking-widest text-sm">Hassle-Free Booking</span>
+      <h2 class="text-3xl sm:text-4xl font-black text-navy-900 tracking-tight">Schedule Diagnostic Tests</h2>
+      <p class="text-navy-600 text-lg font-light leading-relaxed">
+        Book doorstep collection or farm field visits. Select the required tests below for a dynamic estimated pricing summary.
+      </p>
+    </div>
+
+    <!-- Floating Panels Grid -->
+    <div class="grid lg:grid-cols-12 gap-12 items-stretch max-w-5xl mx-auto">
+      <!-- Interactive Service Estimator Column (Left 7 Columns) -->
+      <div class="lg:col-span-7 glass-blue-card rounded-3xl overflow-hidden flex flex-col justify-between">
+        <div>
+          <!-- Header -->
+          <div class="bg-navy-900 px-8 py-5 text-white flex justify-between items-center">
+            <span class="font-extrabold tracking-wide uppercase text-sm">Select Diagnostics</span>
+            <span class="bg-teal-600 text-white text-xs font-black px-3 py-1 rounded-full uppercase shadow">Instant Estimate</span>
+          </div>
+
+          <div class="p-8 space-y-6">
+            <h3 class="text-xl font-extrabold text-navy-900">Choose Required Services</h3>
+            
+            <!-- Checkbox Services Selection -->
+            <div class="space-y-3">
+              <!-- Test 1 -->
+              <label class="flex items-start gap-3 p-4 border border-navy-100 rounded-xl hover:bg-[#f3f7f7]/30 cursor-pointer select-none transition-all">
+                <input type="checkbox" name="vet-tests" value="pathology" data-price="400" checked class="mt-1 w-4 h-4 text-teal-600 focus:ring-teal-500 border-navy-200 rounded">
+                <div class="flex-grow">
+                  <div class="flex justify-between font-bold text-sm text-navy-900">
+                    <span>Pathology & Blood panel</span>
+                    <span>₹400</span>
+                  </div>
+                  <p class="text-xs text-navy-500 font-light mt-0.5">Basic hematology, CBC, liver & kidney panels.</p>
+                </div>
+              </label>
+
+              <!-- Test 2 -->
+              <label class="flex items-start gap-3 p-4 border border-navy-100 rounded-xl hover:bg-[#f3f7f7]/30 cursor-pointer select-none transition-all">
+                <input type="checkbox" name="vet-tests" value="xray" data-price="1200" class="mt-1 w-4 h-4 text-teal-600 focus:ring-teal-500 border-navy-200 rounded">
+                <div class="flex-grow">
+                  <div class="flex justify-between font-bold text-sm text-navy-900">
+                    <span>Portable Digital X-Ray</span>
+                    <span>₹1,200</span>
+                  </div>
+                  <p class="text-xs text-navy-500 font-light mt-0.5">High-definition bone and thoracic diagnostics at your location.</p>
+                </div>
+              </label>
+
+              <!-- Test 3 -->
+              <label class="flex items-start gap-3 p-4 border border-navy-100 rounded-xl hover:bg-[#f3f7f7]/30 cursor-pointer select-none transition-all">
+                <input type="checkbox" name="vet-tests" value="ecg" data-price="600" class="mt-1 w-4 h-4 text-teal-600 focus:ring-teal-500 border-navy-200 rounded">
+                <div class="flex-grow">
+                  <div class="flex justify-between font-bold text-sm text-navy-900">
+                    <span>Portable ECG (Cardiology)</span>
+                    <span>₹600</span>
+                  </div>
+                  <p class="text-xs text-navy-500 font-light mt-0.5">Electrocardiogram tracking for small & large animals.</p>
+                </div>
+              </label>
+
+              <!-- Test 4 -->
+              <label class="flex items-start gap-3 p-4 border border-navy-100 rounded-xl hover:bg-[#f3f7f7]/30 cursor-pointer select-none transition-all">
+                <input type="checkbox" name="vet-tests" value="abg" data-price="800" class="mt-1 w-4 h-4 text-teal-600 focus:ring-teal-500 border-navy-200 rounded">
+                <div class="flex-grow">
+                  <div class="flex justify-between font-bold text-sm text-navy-900">
+                    <span>Portable ABG (Blood Gas Analysis)</span>
+                    <span>₹800</span>
+                  </div>
+                  <p class="text-xs text-navy-500 font-light mt-0.5">Critical care testing for acid-base and electrolyte levels.</p>
+                </div>
+              </label>
+            </div>
+
+            <!-- Visit Type Radio Selection -->
+            <div class="space-y-3 pt-2">
+              <span class="text-sm font-bold text-navy-900 block">Service Location Type:</span>
+              <div class="grid grid-cols-2 gap-4">
+                <!-- Lab Visit -->
+                <label class="relative border border-navy-100 rounded-xl p-3 flex flex-col items-center justify-center cursor-pointer hover:bg-[#f3f7f7]/30 transition-all select-none">
+                  <input type="radio" name="visit-type" value="lab" data-fee="0" class="sr-only peer">
+                  <div class="absolute top-2 right-2 w-4 h-4 border border-navy-200 rounded-full flex items-center justify-center peer-checked:bg-teal-600 peer-checked:border-teal-600">
+                    <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                  </div>
+                  <i data-lucide="building" class="w-5 h-5 text-navy-400 mb-1 peer-checked:text-teal-600"></i>
+                  <span class="text-xs font-bold text-navy-900">Visit Gwalior Lab</span>
+                  <span class="text-[10px] text-navy-400 mt-0.5">No collection fee</span>
+                </label>
+
+                <!-- Doorstep / Farm Visit -->
+                <label class="relative border border-navy-100 rounded-xl p-3 flex flex-col items-center justify-center cursor-pointer hover:bg-[#f3f7f7]/30 transition-all select-none">
+                  <input type="radio" name="visit-type" value="home" data-fee="150" checked class="sr-only peer">
+                  <div class="absolute top-2 right-2 w-4 h-4 border border-navy-200 rounded-full flex items-center justify-center peer-checked:bg-teal-600 peer-checked:border-teal-600">
+                    <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                  </div>
+                  <i data-lucide="truck" class="w-5 h-5 text-navy-400 mb-1 peer-checked:text-teal-600"></i>
+                  <span class="text-xs font-bold text-navy-900">Home / Farm Collection</span>
+                  <span class="text-[10px] text-teal-600 font-bold mt-0.5">+ ₹150 collection fee</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- pricing summary inside card -->
+        <div class="p-8 bg-teal-50/25 border-t border-navy-100 flex flex-col sm:flex-row gap-6 items-center justify-between">
+          <div class="text-center sm:text-left">
+            <span class="text-xs font-bold text-navy-400 uppercase block">Selected Services Count</span>
+            <span class="text-sm font-black text-navy-900" id="services-count">1 Test Selected</span>
+          </div>
+
+          <div class="text-center sm:text-right">
+            <div class="text-xs text-navy-500 font-bold uppercase">Estimated Price Estimate</div>
+            <div class="text-3xl font-black text-teal-600" id="live-subtotal">₹550</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Checkout Form Column (Right 5 Columns) -->
+      <div class="lg:col-span-5 glass-blue-card rounded-3xl p-8 flex flex-col justify-between">
+        <h3 class="text-2xl font-black text-navy-950 mb-6 flex items-center gap-2">
+          <i data-lucide="clipboard-list" class="w-6 h-6 text-teal-600"></i>
+          Booking Form
+        </h3>
+        
+        <form id="order-form" class="space-y-4">
+          <!-- Patient / Owner details -->
+          <div>
+            <label for="owner-name" class="block text-xs font-bold text-navy-700 uppercase mb-1">Owner Name</label>
+            <div class="relative">
+              <i data-lucide="user" class="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-navy-400"></i>
+              <input type="text" id="owner-name" required placeholder="Owner's full name" class="w-full pl-10 pr-4 py-2.5 bg-navy-50/30 border border-navy-100 rounded-xl focus:bg-white focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all text-sm">
+            </div>
+          </div>
+
+          <!-- Phone Number -->
+          <div>
+            <label for="user-phone" class="block text-xs font-bold text-navy-700 uppercase mb-1">Mobile Helpline / Contact</label>
+            <div class="relative">
+              <i data-lucide="phone" class="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-navy-400"></i>
+              <input type="tel" id="user-phone" required pattern="[0-9]{10}" placeholder="10-digit mobile number" class="w-full pl-10 pr-4 py-2.5 bg-navy-50/30 border border-navy-100 rounded-xl focus:bg-white focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all text-sm">
+            </div>
+          </div>
+
+          <!-- Animal Type & Breed -->
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label for="animal-type" class="block text-xs font-bold text-navy-700 uppercase mb-1">Animal Type</label>
+              <select id="animal-type" required class="w-full px-3 py-2.5 bg-navy-50/30 border border-navy-100 rounded-xl focus:bg-white focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all text-sm">
+                <option value="Dog">Dog</option>
+                <option value="Cat">Cat</option>
+                <option value="Cow">Cow / Buffalo</option>
+                <option value="Horse">Horse</option>
+                <option value="Goat">Goat / Sheep</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="animal-name" class="block text-xs font-bold text-navy-700 uppercase mb-1">Patient Name</label>
+              <input type="text" id="animal-name" placeholder="Pet Name / tag" class="w-full px-3 py-2.5 bg-navy-50/30 border border-navy-100 rounded-xl focus:bg-white focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all text-sm">
+            </div>
+          </div>
+
+          <!-- Date -->
+          <div>
+            <label for="booking-date" class="block text-xs font-bold text-navy-700 uppercase mb-1">Preferred Date</label>
+            <div class="relative">
+              <i data-lucide="calendar" class="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-navy-400"></i>
+              <input type="date" id="booking-date" required class="w-full pl-10 pr-4 py-2.5 bg-navy-50/30 border border-navy-100 rounded-xl focus:bg-white focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all text-sm">
+            </div>
+          </div>
+
+          <!-- Address -->
+          <div>
+            <label for="user-address" class="block text-xs font-bold text-navy-700 uppercase mb-1">Clinic / Home / Farm Address</label>
+            <div class="relative">
+              <i data-lucide="map-pin" class="absolute left-3.5 top-3.5 w-4 h-4 text-navy-400"></i>
+              <textarea id="user-address" required rows="3" placeholder="Address in Gwalior (Street, Colony, Landmark)..." class="w-full pl-10 pr-4 py-2.5 bg-navy-50/30 border border-navy-100 rounded-xl focus:bg-white focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all text-sm"></textarea>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="w-full mt-4 py-3.5 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl shadow-lg shadow-teal-600/10 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
+            <span>Submit Appointment Request</span>
+            <i data-lucide="check" class="w-5 h-5"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Review Location & Map Section (Integrating signboard.jpg) -->
+  <section class="py-16 max-w-7xl mx-auto px-6 scroll-mt-24">
+    <div class="bg-gradient-to-br from-[#e2edf6] to-[#d6e5f0] rounded-[2.5rem] border border-[#b8cee0] shadow-xl shadow-navy-900/5 overflow-hidden">
+      <!-- Horizontal Signboard Header Image -->
+      <div class="w-full border-b border-navy-100">
+        <img src="./images/signboard-cvd.jpg" alt="Central Vet Diagnostics Gwalior Signboard" class="w-full h-auto aspect-auto object-contain">
+      </div>
+      
+      <div class="p-8 md:p-12 grid md:grid-cols-12 gap-8 items-center">
+        <!-- Location details -->
+        <div class="md:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-navy-50 border border-navy-100 text-navy-700 rounded-lg text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="map-pin" class="w-4 h-4 text-teal-600"></i>
+            <span>Physical Lab Location</span>
+          </div>
+          <h2 class="text-3xl font-black text-navy-900 tracking-tight leading-none">
+            Visit Our Gwalior Centre
+          </h2>
+          <p class="text-navy-600 font-light leading-relaxed">
+            Our state-of-the-art pathology laboratory is conveniently located on New Collectorate Road. Spot our official signboard (shown above) directly behind the Mukherjee Bharat Petrol Pump.
+          </p>
+          <div class="space-y-3 text-sm text-navy-800">
+            <div class="flex items-start gap-3">
+              <i data-lucide="navigation" class="w-5 h-5 text-teal-600 shrink-0 mt-0.5"></i>
+              <div>
+                <strong>Address:</strong><br>
+                40, Adarsh Colony (Adarsh Society), Behind Mukherjee Bharat Petrol Pump, New Collectorate Road, Gwalior, Madhya Pradesh - 474006
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="phone-call" class="w-5 h-5 text-teal-600 shrink-0"></i>
+              <div>
+                <strong>Helpline Support:</strong> 9977160088 (Call anytime for doorstep testing setup)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info callout card -->
+        <div class="md:col-span-5 bg-[#eaf1f7]/60 border border-[#cbdbe7] p-8 rounded-3xl space-y-4">
+          <h4 class="font-extrabold text-navy-900 text-lg">Partner in Animal Health</h4>
+          <p class="text-xs text-navy-600 font-light leading-relaxed">
+            We provide diagnostic support for veterinarians, dairy farms, companion pet owners, and poultry houses across Gwalior and surrounding regions. Fast sample pickup and zero-stress on-site examinations.
+          </p>
+          <div class="bg-[#f0f6fa] px-4 py-3.5 rounded-xl border border-[#cbdbe7] flex items-center justify-between text-xs">
+            <span class="font-bold text-navy-500 uppercase">Emergency Support</span>
+            <span class="bg-teal-600 text-white font-black px-2.5 py-0.5 rounded uppercase">24/7 Helpline</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment Booking Success Dialog Modal -->
+  <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+    <div class="absolute inset-0 bg-navy-950/40 backdrop-blur-sm transition-opacity" id="modal-backdrop"></div>
+    
+    <div class="relative bg-gradient-to-br from-[#f0f6fa] to-[#e1edf6] rounded-3xl shadow-2xl max-w-md w-full mx-6 overflow-hidden border border-[#cbdbe7] z-10 scale-95 opacity-0 transition-all duration-300" id="modal-card">
+      <div class="p-8 text-center space-y-6">
+        <div class="mx-auto w-16 h-16 bg-teal-50 text-teal-600 rounded-full flex items-center justify-center">
+          <i data-lucide="calendar-check" class="w-8 h-8 stroke-[2.5]"></i>
+        </div>
+        
+        <div class="space-y-2">
+          <h3 class="text-2xl font-black text-navy-900">Request Submitted!</h3>
+          <p class="text-sm text-navy-500 font-light">We have received your veterinary diagnostics request. A support team member will contact you shortly to confirm the appointment.</p>
+        </div>
+
+        <!-- Appointment Receipt Card -->
+        <div class="bg-[#f3f7f7]/50 rounded-2xl p-5 border border-navy-100 text-left space-y-3">
+          <div class="flex justify-between border-b border-navy-100/50 pb-2 text-xs">
+            <span class="text-navy-500 font-bold uppercase">Booking ID: <strong class="text-teal-600" id="receipt-id">#CVD-92839</strong></span>
+            <span class="text-navy-500 font-semibold" id="receipt-date">June 18, 2026</span>
+          </div>
+          
+          <div class="space-y-1.5 text-sm text-navy-800">
+            <div class="flex justify-between font-bold">
+              <span>Patient Species</span>
+              <span id="receipt-species" class="text-navy-900">Dog</span>
+            </div>
+            <div class="flex justify-between font-bold">
+              <span>Selected Tests Count</span>
+              <span id="receipt-tests-count">1 Test</span>
+            </div>
+            <div class="flex justify-between text-xs text-navy-500 font-semibold">
+              <span>Home / Farm Collection Charge</span>
+              <span id="receipt-collection-charge" class="text-teal-600">₹150</span>
+            </div>
+            <div class="flex justify-between font-black text-base text-navy-900 border-t border-dashed border-navy-200 pt-2">
+              <span>Estimated Cost</span>
+              <span id="receipt-total" class="text-teal-600">₹550</span>
+            </div>
+          </div>
+
+          <div class="text-xs text-navy-600 space-y-1.5 pt-2 border-t border-navy-100 leading-relaxed font-light">
+            <div><strong>Pet Owner:</strong> <span id="receipt-name">Aman Kumar</span></div>
+            <div><strong>Location Address:</strong> <span id="receipt-addr">Gwalior, MP</span></div>
+            <div><strong>Helpline Support:</strong> <span class="text-teal-600 font-bold">9977160088</span></div>
+          </div>
+        </div>
+
+        <button type="button" id="close-modal-btn" class="w-full py-3.5 bg-navy-900 hover:bg-navy-800 text-white font-bold rounded-xl transition-all">
+          Done
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-navy-900 text-navy-400 pt-16 pb-12 relative border-t border-navy-850">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+      <!-- Footer Column 1: Info -->
+      <div class="space-y-6">
+        <a href="#" class="flex items-center gap-3">
+          <img src="./images/logo.png" alt="Central Vet Diagnostics Logo" class="w-8 h-8 object-contain rounded-full">
+          <span class="text-xl font-black tracking-tight text-white uppercase">Central Vet</span>
+        </a>
+        <p class="text-sm text-navy-300 leading-relaxed font-light">
+          Premium animal diagnostics, blood panels, and portable digital X-ray services right at your doorstep in Gwalior. Dedicated lab support.
+        </p>
+        <div class="flex gap-4">
+          <a href="tel:9977160088" class="w-9 h-9 rounded-full bg-navy-800 flex items-center justify-center text-navy-300 hover:text-white hover:bg-teal-600 transition-colors">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Column 2: Navigation Links -->
+      <div class="space-y-4">
+        <h4 class="text-white font-bold text-sm uppercase tracking-wider">Quick Links</h4>
+        <ul class="space-y-2 text-sm font-light">
+          <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
+          <li><a href="#patient-guide" class="hover:text-white transition-colors">How It Works</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors">Diagnostic Services</a></li>
+          <li><a href="#booking" class="hover:text-white transition-colors">Book Appointment</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Column 3: Contact Info -->
+      <div class="space-y-4">
+        <h4 class="text-white font-bold text-sm uppercase tracking-wider">Lab Address</h4>
+        <ul class="space-y-3 text-sm font-light">
+          <li class="flex items-start gap-3">
+            <i data-lucide="map-pin" class="w-5 h-5 text-teal-500 shrink-0"></i>
+            <span>40, Adarsh Society, Behind Mukherjee Bharat Petrol Pump, New Collectorate Road, Gwalior, Madhya Pradesh, 474006</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i data-lucide="phone" class="w-5 h-5 text-teal-500 shrink-0"></i>
+            <span>+91 99771 60088</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Footer Column 4: Hours / Trust -->
+      <div class="space-y-4">
+        <h4 class="text-white font-bold text-sm uppercase tracking-wider">Working Hours</h4>
+        <p class="text-sm font-light">Lab Support: 8:00 AM - 8:00 PM (Every day). Emergency doorstep and farm field support helpline open 24/7.</p>
+        <div class="bg-navy-800 p-4 rounded-xl border border-navy-750">
+          <div class="text-xs font-bold text-white mb-1 uppercase tracking-wide">Helpline Status</div>
+          <div class="text-teal-400 font-extrabold text-sm flex items-center gap-1.5">
+            <i data-lucide="phone-call" class="w-4 h-4 animate-bounce"></i>
+            <span>Available 24/7 (9977160088)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="max-w-7xl mx-auto px-6 border-t border-navy-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-navy-500">
+      <div>&copy; 2026 Central Vet Diagnostics. Accurate Results • Trusted Diagnosis. All rights reserved.</div>
+      <div class="flex gap-6">
+        <a href="tel:9977160088" class="hover:text-navy-300">Call Support</a>
+        <a href="#booking" class="hover:text-navy-300">Book Test</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Link script.js -->
+  <script src="app.js"></script>
+</body>
+</html>

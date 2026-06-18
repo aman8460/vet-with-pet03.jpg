@@ -1,0 +1,132 @@
+/* Custom Styles for Central Vet Diagnostics */
+
+/* Scroll behavior adjust for sticky header offset */
+html {
+  scroll-padding-top: 5.5rem;
+}
+
+/* Custom Scrollbar - Medical Teal Theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #99f6e4; /* light teal */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0d9488; /* soft medical teal */
+}
+
+/* Modal animation support */
+#success-modal.active {
+  display: flex !important;
+}
+
+#success-modal.active #modal-backdrop {
+  opacity: 1;
+}
+
+#success-modal.active #modal-card {
+  transform: scale(1) !important;
+  opacity: 1 !important;
+}
+
+/* Focus styles */
+textarea:focus, input:focus, select:focus {
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15); /* Teal accent glow */
+  border-color: #0d9488 !important;
+}
+
+/* Micro-interactions & transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* High-tech AI scan line animation */
+@keyframes scan {
+  0%, 100% {
+    top: 4px;
+    opacity: 0.6;
+  }
+  50% {
+    top: calc(100% - 6px);
+    opacity: 1;
+  }
+}
+
+/* Soft pulse glow for booking indicators */
+.pulse-glow {
+  box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.5);
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(0.98);
+    box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.5);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(13, 148, 136, 0);
+  }
+  100% {
+    transform: scale(0.98);
+    box-shadow: 0 0 0 0 rgba(13, 148, 136, 0);
+  }
+}
+
+/* X-Ray Case Gallery Interactive Styles */
+.xray-tab-btn {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.xray-card {
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.xray-card.hidden-case {
+  display: none !important;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+/* Poster Slideshow Animation Styles */
+.poster-slide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.poster-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+/* Glassmorphic Blue Card Styles to reduce white */
+.glass-blue-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(203, 219, 231, 0.85);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.03);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-blue-card:hover {
+  background: rgba(234, 241, 247, 0.9);
+  border-color: rgba(154, 185, 209, 0.95);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.06);
+}
+
